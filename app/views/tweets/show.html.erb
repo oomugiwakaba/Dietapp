@@ -13,7 +13,7 @@
         </ul>
       </div>
     <% end %>
-    <p><%= @tweet.text %></p>
+    <p><%= text_url_to_link(h(@tweet.text)).html_safe %></p>
     <span class="name">
       <a href="/users/<%= @tweet.user.id %>">
         <span>投稿者</span><%= @tweet.user.nickname %>
