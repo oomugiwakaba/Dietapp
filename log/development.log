@@ -28885,3 +28885,155 @@ Processing by TweetsController#index as HTML
 Completed 200 OK in 199ms (Views: 122.7ms | ActiveRecord: 74.3ms | Allocations: 41594)
 
 
+Started GET "/" for ::1 at 2021-04-04 22:06:48 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (2.1ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` ORDER BY created_at DESC[0m
+  ↳ app/helpers/tweets_helper.rb:4:in `tweet_lists'
+  [1m[36mUser Load (47.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+  ↳ app/helpers/tweets_helper.rb:4:in `tweet_lists'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tweets/_tweet.html.erb:8
+  Rendered tweets/_tweet.html.erb (Duration: 5.6ms | Allocations: 1714)
+  Rendered tweets/_tweet.html.erb (Duration: 0.6ms | Allocations: 312)
+  Rendered tweets/_tweet.html.erb (Duration: 0.8ms | Allocations: 310)
+  Rendered tweets/_tweet.html.erb (Duration: 0.8ms | Allocations: 310)
+  Rendered tweets/_tweet.html.erb (Duration: 0.7ms | Allocations: 310)
+  Rendered tweets/_tweet.html.erb (Duration: 0.8ms | Allocations: 312)
+  Rendered tweets/_tweet.html.erb (Duration: 0.5ms | Allocations: 312)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 68.0ms | Allocations: 5892)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 36.4ms | ActiveRecord: 50.0ms | Allocations: 13645)
+
+
+Started GET "/3/21" for ::1 at 2021-04-04 22:06:48 +0900
+Started GET "/" for ::1 at 2021-04-04 22:06:48 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/3/21"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (1.9ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` ORDER BY created_at DESC[0m
+  ↳ app/helpers/tweets_helper.rb:4:in `tweet_lists'
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+  ↳ app/helpers/tweets_helper.rb:4:in `tweet_lists'
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tweets/_tweet.html.erb:8
+  Rendered tweets/_tweet.html.erb (Duration: 9.1ms | Allocations: 2534)
+  Rendered tweets/_tweet.html.erb (Duration: 0.9ms | Allocations: 329)
+  Rendered tweets/_tweet.html.erb (Duration: 1.7ms | Allocations: 400)
+  Rendered tweets/_tweet.html.erb (Duration: 0.8ms | Allocations: 310)
+  Rendered tweets/_tweet.html.erb (Duration: 0.7ms | Allocations: 310)
+  Rendered tweets/_tweet.html.erb (Duration: 0.6ms | Allocations: 312)
+  Rendered tweets/_tweet.html.erb (Duration: 0.5ms | Allocations: 312)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 33.9ms | Allocations: 8990)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 46.1ms | ActiveRecord: 13.8ms | Allocations: 17758)
+
+
+Started GET "/" for ::1 at 2021-04-04 22:06:50 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` ORDER BY created_at DESC[0m
+  ↳ app/helpers/tweets_helper.rb:4:in `tweet_lists'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+  ↳ app/helpers/tweets_helper.rb:4:in `tweet_lists'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tweets/_tweet.html.erb:8
+  Rendered tweets/_tweet.html.erb (Duration: 6.9ms | Allocations: 1979)
+  Rendered tweets/_tweet.html.erb (Duration: 0.5ms | Allocations: 312)
+  Rendered tweets/_tweet.html.erb (Duration: 0.7ms | Allocations: 310)
+  Rendered tweets/_tweet.html.erb (Duration: 0.9ms | Allocations: 310)
+  Rendered tweets/_tweet.html.erb (Duration: 0.5ms | Allocations: 310)
+  Rendered tweets/_tweet.html.erb (Duration: 0.5ms | Allocations: 312)
+  Rendered tweets/_tweet.html.erb (Duration: 0.7ms | Allocations: 312)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 22.6ms | Allocations: 6437)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 1.5ms | Allocations: 15405)
+
+
+Started GET "/" for ::1 at 2021-04-04 22:06:50 +0900
+Started GET "/3/21" for ::1 at 2021-04-04 22:06:50 +0900
+Processing by TweetsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/3/21"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (12.8ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` ORDER BY created_at DESC[0m
+  ↳ app/helpers/tweets_helper.rb:4:in `tweet_lists'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+  ↳ app/helpers/tweets_helper.rb:4:in `tweet_lists'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tweets/_tweet.html.erb:8
+  Rendered tweets/_tweet.html.erb (Duration: 13.2ms | Allocations: 6813)
+  Rendered tweets/_tweet.html.erb (Duration: 0.7ms | Allocations: 312)
+  Rendered tweets/_tweet.html.erb (Duration: 0.7ms | Allocations: 310)
+  Rendered tweets/_tweet.html.erb (Duration: 0.5ms | Allocations: 310)
+  Rendered tweets/_tweet.html.erb (Duration: 0.5ms | Allocations: 311)
+  Rendered tweets/_tweet.html.erb (Duration: 0.5ms | Allocations: 312)
+  Rendered tweets/_tweet.html.erb (Duration: 1.2ms | Allocations: 312)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 127.4ms | Allocations: 28160)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 247ms (Views: 231.2ms | ActiveRecord: 15.3ms | Allocations: 64743)
+
+
