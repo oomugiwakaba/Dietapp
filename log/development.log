@@ -29037,3 +29037,55 @@ puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
 Completed 200 OK in 247ms (Views: 231.2ms | ActiveRecord: 15.3ms | Allocations: 64743)
 
 
+Started GET "/tweets/18/edit" for ::1 at 2021-04-04 22:10:57 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"authenticity_token"=>"OqaYaz/SdFpXU9uIEanZqKgje1vVd4hX8OBfiN1w1qDNxbO8+b1k9rcge7RS0jvakPdQt6VpRUaFtwPs8OLCuw==", "id"=>"18"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 18 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:46:in `set_tweet'
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (Duration: 3.0ms | Allocations: 454)
+  Rendered tweets/edit.html.erb within layouts/application (Duration: 5.4ms | Allocations: 766)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.7ms | Allocations: 10256)
+
+
+Started GET "/tweets/18" for ::1 at 2021-04-04 22:11:00 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"authenticity_token"=>"nggS0SQjGtrLYGDPlaAwu267MIG76xoaGdLCuFP+399pazkG4kwKdisTwPPW29LJVm8bbcv11wtshZ7cfmzLxA==", "id"=>"18"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 18 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:46:in `set_tweet'
+  Rendering tweets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tweets/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/tweets/show.html.erb:18
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`tweet_id` = 18[0m
+  ↳ app/views/tweets/show.html.erb:34
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3[0m
+  ↳ app/views/tweets/show.html.erb:34
+  Rendered tweets/show.html.erb within layouts/application (Duration: 19.1ms | Allocations: 5567)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 29.4ms | ActiveRecord: 2.2ms | Allocations: 14205)
+
+
+Started GET "/tweets/18" for ::1 at 2021-04-04 22:11:00 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTweet Load (10.6ms)[0m  [1m[34mSELECT `tweets`.* FROM `tweets` WHERE `tweets`.`id` = 18 LIMIT 1[0m
+  ↳ app/controllers/tweets_controller.rb:46:in `set_tweet'
+  Rendering tweets/show.html.erb within layouts/application
+  [1m[36mUser Load (21.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tweets/show.html.erb:3
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/tweets/show.html.erb:18
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`tweet_id` = 18[0m
+  ↳ app/views/tweets/show.html.erb:34
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3[0m
+  ↳ app/views/tweets/show.html.erb:34
+  Rendered tweets/show.html.erb within layouts/application (Duration: 46.6ms | Allocations: 5121)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 38.2ms | ActiveRecord: 38.4ms | Allocations: 13933)
+
+
