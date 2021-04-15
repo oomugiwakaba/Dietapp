@@ -2,7 +2,7 @@
  
 Dietappは日々のカロリー等を簡潔にメモ出来ます。
  
-# DEMO
+# 実際の画像
  
  https://gyazo.com/aa91412235b79754faa906ad3426ba37
 
