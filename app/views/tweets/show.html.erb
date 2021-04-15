@@ -13,7 +13,7 @@
         </ul>
       </div>
     <% end %>
-    <p><%= @tweet.text %></p>
+    <p><%= text_url_to_link(h(@tweet.text)).html_safe %></p>
     <span class="name">
       <a href="/users/<%= @tweet.user.id %>">
         <span>投稿者</span><%= @tweet.user.nickname %>
@@ -34,7 +34,7 @@
       <% @comments.each do |comment| %>
         <p>
           <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-          <%= comment.text %>
+          <%= text_url_to_link(h(comment.text)).html_safe %>
         </p>
       <% end %>
     </div>
