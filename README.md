@@ -20,5 +20,5 @@ https://dietapp-34024.herokuapp.com/
  
 # 作成者
  
-佐々木凌
+佐々木 凌
  
