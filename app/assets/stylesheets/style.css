@@ -755,6 +755,7 @@ header.header div.header__bar.row h1.grid-6 {
   font-size: 20px;
   line-height: 41px;
   float: left;
+  font-family: fantasy;
 }
 
 header.header div.header__bar.row h1.grid-6 a {
